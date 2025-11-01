@@ -1,5 +1,360 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../images/cover-image-light.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header {
+  position: relative;
+  display: grid;
+  background-image: url(../images/cover-image-light.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-template-rows: min-content min-content min-content min-content min-content;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: 
+  "left-top-corner . right-top-corner"
+  "menu menu menu"
+  "main main main"
+  "description description description"
+  "left-bot-corner . right-bot-corner";
+  width: var(--header-width,375px);
+  height: var(--header-height, 668px);
+  padding: var(--header-padding, 10px);
+  margin-block-end: var(--header-margin, 40px);
+}
+
+.corner-top-decoration {
+  width: var(--header-decoration-width,25.035839080810547px);
+  height: var(--header-decoration-height, 25.001531600952237px);
+  border-top:1px solid var(--main-border-color,#353430);
+  border-right:1px solid var(--main-border-color,#353430);
+  grid-area: right-top-corner;
+  justify-self: end;
+  margin-block-end: var(--corner-top-decoration-margin, 40px);
+}
+
+.corner-bottom-decoration {
+  grid-area: left-bot-corner;
+  width: var(--header-decoration-width,25.035839080810547px);
+  height: var(--header-decoration-height, 25.001531600952237px);
+  border-bottom:1px solid var(--main-border-color,#353430);
+  border-left:1px solid var(--main-border-color,#353430);
+  align-self: end;
+}
+
+.header__theme-menu {
+  grid-area: menu;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: var(--header__theme-menu,10px);
+  margin-block-end: var(--header__theme-menu, 65px);
+}
+
+.header__title {
+  grid-area: main;
+  font-family: var(--main-font-family,IBM Plex Mono);
+  font-weight: var( --title-font-weight, 700);
+  font-style: Bold;
+  font-size: var(--title-text-size,clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
+  line-height: 83%;
+  letter-spacing: 0%;
+  color: #FFC2E6;
+  text-shadow: var( --header-text-shadow, 4px) var( --header-text-shadow, 4px) var(--main-background-color, #FF8DCB);
+  margin-block-end: var(--header-title-margin, 55px);
+}
+
+.header__discription {
+  grid-area: description;
+  font-family: var(--main-font-family,IBM Plex Mono);
+  font-weight: var( --title-font-weight, 700);
+  font-style: Bold;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  color: var(--main-border-color,#353430);
+  background-color: var(--main-background-color, #FF8DCB);
+  width: var(--header-discription-width, 355px);
+  height: var(--header-discription-height, 117px);
+  margin-block-end: var( --header-discription-margin, 31px);
+}
+
+.discription-block {
+  display: block;
+}
+
+.header__theme-menu-list{
+  display: flex;
+  flex-direction: column;
+  gap: var( --header__theme-menu-list,10px);
+}
+
+.header__theme-menu-button {
+  font-family: var(--main-font-family,IBM Plex Mono);
+  font-weight: var( --light-font-weight, 400);
+  font-style: Regular;
+  font-size: var(--button-size,18px);
+  line-height: var(--button-size,18px);
+  text-align: center;
+  letter-spacing: 0%;
+  color: var(--main-border-color,#353430);
+  width: var(--header-button-width, 76px);
+  height: var(--header-button-height, 24px);
+  padding-block-end:var(--header-discription-margin, 10px);
+  outline: none;
+}
+
+.header__theme-menu-button:not(:focus):hover {
+  outline: 1px solid var(--hover, #32312D66);
+  outline-offset: 0;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--main-border-color,#353430);
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--main-border-color,#353430);
+}
+
+.text-link { 
+  text-shadow: 1px 1px 1px var(--main-background-color, #FF8DCB);
+  text-decoration: none;
+}
+.text-link:hover { 
+  text-shadow: 1px 1px 1px var(--main-background-color, #FF8DCB);
+  text-decoration: underline;
+}
+.text-link:focus-visible { 
+  outline: solid 1px var(--main-border-color,#353430);
+}
+
+.main__content {
+  width: var(--main-content-width, 375px);
+  height: var(--main-content-height, 5354px);
+  background-image: url(../images/cover-image-light.png);
+  padding:var(--main-content-pading, 10px)var(--main-content-pading, 10px) 0 var(--main-content-pading, 10px);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--main-content-margin-space,75px);
+}
+.main__content-introduction {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var( --main-content-space-margin, 50px);
+}
+.main__content-introduction__cards-group {
+  display: flex;
+  flex-direction: column;
+  gap: var( --main-content-introduction-gap, 20px);
+}
+
+.main__content-introduction__title {
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --title-font-weight, 700);
+  font-style: Bold;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  margin-block-end: var(--main-content-space-title-margin, 20px);
+
+}
+.card-title-introduction{
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --title-font-weight, 700);
+  font-style: Bold;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  background-color: var(--main-background-color, #FF8DCB);
+  margin-block-end: var(--card-title-margin, 10px);
+}
+.card-discription-introduction{
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --light-font-weight, 400);
+  font-style: Regular;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  color:var(--main-border-color,#353430);
+}
+
+.main__content-hypothesis {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var( --main-content-space-margin, 50px);
+}
+.main__content-hypothesis__cards-group {
+  display: flex;
+  flex-direction: column;
+  gap: var( --main-content-introduction-gap, 20px);
+}
+
+.main__content-hypothesis__title {
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --title-font-weight, 700);
+  font-style: Bold;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  margin-block-end: var(--main-content-space-title-margin, 20px);
+}
+.card-title-hypothesis{
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --title-font-weight, 700);
+  font-style: Bold;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  background-color: var(--main-background-color, #FF8DCB);
+  margin-block-end: var(--card-title-margin, 10px);
+}
+.card-discription-hypothesis{
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --light-font-weight, 400);
+  font-style: Regular;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  color:var(--main-border-color,#353430);
+}
+
+.main__content-solution {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var( --main-content-space-margin, 50px);
+}
+.main__content-solution__cards-group {
+  display: flex;
+  flex-direction: column;
+  gap: var( --main-content-introduction-gap, 20px);
+}
+
+.main__content-solution__title {
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --title-font-weight, 700);
+  font-style: Bold;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  margin-block-end: var(--main-content-space-title-margin, 20px);
+}
+.card-group-title-solution{
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --title-font-weight, 700);
+  font-style: Bold;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  background-color: var(--main-background-color, #FF8DCB);
+}
+.card-discription-solution{
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --light-font-weight, 400);
+  font-style: Regular;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  color:var(--main-border-color,#353430);
+}
+.card-title-solution {
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --light-font-weight, 400);
+  font-style: Regular;
+  font-size:var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  background-color: var(--main-background-color, #FF8DCB);
+  margin-bottom: var(--card-title-margin, 10px);
+}
+
+.main__content-images-section{
+  margin-bottom: 40px;
+}
+
+.images-section__title {
+  font-family: var(--main-font-family,IBM Plex Mono);;
+  font-weight: var( --title-font-weight, 700);
+  font-style: Bold;
+  font-size: var( --description-text-size, 18px);
+  line-height: var( --title-text-height, 23.4px);
+  letter-spacing: 0%;
+  background-color: var(--main-background-color, #FF8DCB);
+  margin-bottom: var(--card-title-margin, 10px);
+}
+.images-list {
+  display: grid;
+  flex-direction: column;
+  gap: var(--card-gap, 10px);
+  grid-row: repeat(5, min-content);
+  grid-template-areas: 
+  "sunset"
+  "icecream"
+  "tape"
+  "books"
+  "street"
+  ;
+}
+
+.images-section__card {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  width: 375px;
+  height: 668px;
+  padding: var(--main-content-pading, 10px);
+  display: grid;
+  grid-template-rows: 60px 1fr 60px;
+  grid-template-areas:
+    "right-top-corner"
+    "main"
+    "left-bot-corner";
+}
+.footer__title {
+  grid-area: main;
+  font-family: var(--main-font-family,IBM Plex Mono);
+  font-weight: var( --title-font-weight, 700);
+  font-style: Bold;
+  font-size: var(--title-text-size,clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
+  line-height: 83%;
+  letter-spacing: 0%;
+  color: #FFC2E6;
+  text-shadow: var( --header-text-shadow, 4px) var( --header-text-shadow, 4px) var(--main-background-color, #FF8DCB);
+  margin-block-end: var( --header-text-shadow, 55px);
+  justify-self: center;
+  align-self: center;
+}
+
+.corner-top-decoration-footer {
+  width: var(--header-decoration-width,25.035839080810547px);
+  height: var(--header-decoration-height, 25.001531600952237px);
+  border-top:1px solid var(--main-border-color,#353430);
+  border-right:1px solid var(--main-border-color,#353430);
+  grid-area: right-top-corner;
+  justify-self: end;
+  margin-block-end: var(--corner-top-decoration-margin, 40px);
+}
+
+.corner-bottom-decoration-footer {
+  grid-area: left-bot-corner;
+  width: var(--header-decoration-width,25.035839080810547px);
+  height: var(--header-decoration-height, 25.001531600952237px);
+  border-bottom:1px solid var(--main-border-color,#353430);
+  border-left:1px solid var(--main-border-color,#353430);
+  align-self: end;
 }

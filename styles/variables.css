@@ -1,4 +1,48 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  /* Общие переменные */
+  --main-font-family: IBM Plex Mono;
+  --title-font-weight: 700;
+  --light-font-weight: 400;
+  --button-size: 18px;
+  --main-border-color: #353430;
+  --main-background-color: #FF8DCB;
+  --hover:#32312D66;
+  
+  /* Размеры и пропорции */
+  --header-width: 375px;
+  --header-height: 668px;
+  --header-padding: 10px;
+  --header-decoration-width: 25.035839080810547px;
+  --header-decoration-height: 25.001531600952237px;
+  
+  /* Текст и заголовки */
+  --description-text-size:18px;
+  --title-text-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --title-text-height: 23.4px;
+  
+  /* Отступы и промежутки */
+  --header-margin: 40px;
+  --header__theme-menu: 10px;
+  --header__theme-menu-list: 10px;
+  --corner-top-decoration-margin: 40px;
+  --header-text-shadow: 4px;
+  --header-discription-margin: 31px;
+  --header-discription-width: 355px;
+  --header-discription-height: 117px;
+  --header-button-width: 76px;
+  --header-button-height: 24px;
+  /* Основной контент */
+  --main-content-width: 375px;
+  --main-content-height: 5354px;
+  --main-content-pading: 10px;
+  --main-content-margin-space: 75px;
+  --main-content-space-margin: 50px;
+  --main-content-introduction-gap: 20px;
+  --main-content-space-title-margin: 20px;
+  --card-title-margin: 10px;
+  --card-gap: 10px;
+  --header-title-margin: 55px;
+  
+  /* Текстовые параметры */
+  --header-text-shadow: 4px;
+}
