@@ -1,10 +1,8 @@
-/*Фотографии*/
-:root {
-  --page-background-image:url("../images/cover-image-light.png");
-}
 
-/*Типография*/
 :root {
+  /*Задний фон*/
+  --page-background-image:url("../images/cover-image-light.png");
+  /*Типография*/
   --main-font-family:'IBM Plex Mono';
   --default-text-weight:400;
   --bold-text-weight:700;
@@ -14,10 +12,7 @@
   --title-font-size:clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --title-zize-shadow:4px;
   --footer-text-shadow:2px;
-}
-
-/*Размеры*/
-:root {
+  /*Размеры*/
   --header-height:100%;
   --page-padding:10px;
   --main-content-height:100%;
@@ -36,24 +31,25 @@
   --image-title-margin:10px;
   --decoration-footer-gap:250px;
 }
+  
 @media (min-width: 768px) {
-  :root{
-  --title-font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
-  --page-padding:20px;
-  --page-margin:60px;
-  --sections-margin:80px;
-  --cards-gap:20px;
-  --title-margin:10px;
-  --header-discription-margin:138px;
-  --header-title-margin:162px;
-  --header-menu-margin:173px;
-  --word-spacing:0;
-  --image-title-margin:20px;
-  --decoration-footer-gap:417px;
+  :root {
+    --title-font-size:clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); 
+    --page-padding:20px;
+    --page-margin:60px;
+    --sections-margin:80px;
+    --cards-gap:20px;
+    --title-margin:10px;
+    --header-discription-margin:138px;
+    --header-title-margin:162px;
+    --header-menu-margin:173px;
+    --word-spacing:0;
+    --image-title-margin:20px;
+    --decoration-footer-gap:417px;
   }
 }
 @media (min-width: 1024px) {
-  :root{
+  :root {
     --header-discription-margin:89px;
     --header-title-margin:114px;
     --header-menu-margin:274px;
