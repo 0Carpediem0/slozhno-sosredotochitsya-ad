@@ -29,8 +29,9 @@
   "description description description"
   "left-bot-corner . right-bot-corner";
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: var(--page-padding, 10px);
+  margin-block-end: 20px;
 }
 
 .corner-top-decoration {
@@ -119,11 +120,11 @@
 }
 
 .text-link:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
   text-shadow: 1px 1px 1px var(--link-shadow-color, #FF8DCB);
 }
 
-.text-link:focus-visible { 
+.text-link:focus-visible {
   outline: solid 1px var(--text-second-color,#353430);
 }
 
@@ -293,7 +294,7 @@
     "left-bot-corner";
   gap: var(--decoration-footer-gap,250px);
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: var(--page-pading, 10px);
 }
 
@@ -370,13 +371,12 @@
 
   .images-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 88px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 26% 32% 42%;
     grid-template-areas: 
     "sunset sunset icecream"
     "tape books icecream"
     "tape street street"
-    "tape street street";
   }
 
   .images-section__card {
@@ -385,7 +385,7 @@
 
 }
 @media (min-width: 1024px) {
-  .header{
+  .header {
   grid-template-areas: 
     "left-top-corner menu right-top-corner"
     "main main main"
