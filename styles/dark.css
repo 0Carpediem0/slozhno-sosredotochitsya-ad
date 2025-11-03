@@ -19,12 +19,6 @@
   --button-hover-color:#FF007066;
 }
 
-.theme-light .page {
-  --main-background-color: var(#fff1f7);
-  --page-background-image: url("../images/cover-image-light.png");
-}
-
-
 .theme-dark .page {
   --main-background-color: var(#000028);
   --page-background-image: url("../images/cover-image-dark.png");
