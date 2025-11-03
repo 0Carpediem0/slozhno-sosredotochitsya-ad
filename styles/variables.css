@@ -26,10 +26,9 @@
   --title-of-title-margin:20px;
   --title-margin:10px;
   --header-discription-margin:31px;
-  --header-menu-margin:65px;
+  --header-menu-margin:60px;
   --word-spacing:2px;
   --image-title-margin:10px;
-  --decoration-footer-gap:250px;
 }
   
 @media (min-width: 768px) {
@@ -49,13 +48,12 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (width>=1024px) {
   :root {
     --header-discription-margin:89px;
     --header-title-margin:114px;
     --header-menu-margin:274px;
     --header-menu-margin:274px;
     --decoration-footer-gap:274px;
-    --title-footer-shadow-color:#ff0070;
   }
 }

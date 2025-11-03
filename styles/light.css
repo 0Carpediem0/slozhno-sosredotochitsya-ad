@@ -19,6 +19,11 @@
   --button-hover-color:#32312D66;
 }
 
+@media (width>=1024px) {
+  :root.theme-light{
+    --title-footer-shadow-color:#ff0070;
+  }
+}
 .theme-light .page {
   --main-background-color: var(#fff1f7);
   --page-background-image: url("../images/cover-image-light.png");
