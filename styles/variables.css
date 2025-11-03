@@ -48,6 +48,7 @@
     --decoration-footer-gap:417px;
   }
 }
+
 @media (min-width: 1024px) {
   :root {
     --header-discription-margin:89px;

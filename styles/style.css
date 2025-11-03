@@ -29,9 +29,9 @@
   "description description description"
   "left-bot-corner . right-bot-corner";
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: var(--page-padding, 10px);
-  margin-block-end: 20px;
+  margin-block-end: var(--page-margin,40px);
 }
 
 .corner-top-decoration {
@@ -132,7 +132,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: var(--main-content-height, 100vh);
+  height: 100%;
   margin-bottom: var(--page-margin,40px);
   padding:var(--page-padding, 10px);
 }
@@ -294,7 +294,7 @@
     "left-bot-corner";
   gap: var(--decoration-footer-gap,250px);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: var(--page-pading, 10px);
 }
 
