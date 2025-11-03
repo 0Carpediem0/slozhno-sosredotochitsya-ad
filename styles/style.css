@@ -31,7 +31,7 @@
   width: 100%;
   height: 100vh;
   padding: var(--page-padding, 10px);
-  /*margin-block-end: var(--page-margin,40px);*/
+  margin-block-end: var(--page-margin,40px);
 }
 
 .corner-top-decoration {
@@ -336,10 +336,6 @@
     height: 117px;
   }
 
-  .main__content{
-    margin-top: 260px;
-  }
-
   .main__content-introduction {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -394,10 +390,6 @@
     "main main main"
     "description description description"
     "left-bot-corner . right-bot-corner";
-  }
-
-  .main__content{
-    margin-top: 0;
   }
 
   .header__theme-menu-list {
