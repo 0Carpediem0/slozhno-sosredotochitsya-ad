@@ -53,7 +53,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root.theme-dark {
+  :root {
   --background-color:#000028;
   --title-color:#DB00FF;
   --text-background-decorate-color:#FF0070;
@@ -68,12 +68,12 @@
   --button-hover-color:#FF007066;
   }
 
-  .theme-dark  .page {
+  .page {
     --main-background-color: var(#000028);
     --page-background-image: url("../images/cover-image-dark.png");
   }
 
-  .theme-dark .rec-decor {
+  .rec-decor {
     position: absolute;
     z-index: -1;
     visibility: var(--rec-decor-visibility, visible);
@@ -84,14 +84,14 @@
     inset-block-start: 20px;
   }
     
-  .theme-dark .rec-decor::before {
+  .rec-decor::before {
     content: "REC";
     color: var(--accent-color, #ff0070);
     line-height: 24px;
 
   }
 
-  .theme-dark .rec-decor::after {
+  .rec-decor::after {
     content: "";
     display: inline-block;
     border-radius: 50%;

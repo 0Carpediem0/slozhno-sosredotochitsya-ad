@@ -1,4 +1,4 @@
-:root {
+:root {  
   /*Цвета*/
   --background-color:#fff1f7;
   --title-color:#ffc2e6;
@@ -23,7 +23,7 @@
   --cards-gap:10px;
 }
 @media (width>=1024px) {
-  :root{
+  :root {
     --title-footer-shadow-color:#ff0070;
   }
 }
